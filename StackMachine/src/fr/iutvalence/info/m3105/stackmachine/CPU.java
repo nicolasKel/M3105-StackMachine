@@ -178,5 +178,43 @@ public class CPU
 		}		
 	}
 
+	
+	
+	// Missing methods.
+	public void wireToProgramMemory(Memory programMemory) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wireToExpStack(Stack expStack) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wireToCallStack(Stack callStack) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wireToIoSubsystem(IO ioSystem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void clearStacks() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void setPC(int address) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	// TODO something is missing here...
 }

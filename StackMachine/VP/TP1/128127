@@ -43,7 +43,7 @@ format 76
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default show_stereotype_properties default
     classdiagram 128127 "TP1"
-      draw_all_relations default hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition yes show_members_visibility yes show_members_stereotype default show_members_context default show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers default member_max_width 0 show_parameter_dir no show_parameter_name yes package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      draw_all_relations no hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition yes show_members_visibility yes show_members_stereotype default show_members_context default show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers default member_max_width 0 show_parameter_dir no show_parameter_name yes package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4
     end
 
@@ -137,6 +137,18 @@ ${members}}
 	python_decl ""
 	idl_decl ""
       end
+
+      classrelation 128767 // <association>
+	relation 128511 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128767 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128895 // <association>
+      end
     end
 
     class 128255 "CPU"
@@ -160,6 +172,25 @@ ${members}}
 	
 	
 	
+      end
+
+      classrelation 128127 // <dependency>
+	relation 128127 -_->
+	  a default
+	    classrelation_ref 128127 // <dependency>
+	  b parent class_ref 128383 // Machine
+      end
+
+      classrelation 128255 // <association>
+	relation 128255 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128255 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128383 // <association>
       end
     end
 
@@ -218,6 +249,26 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+      end
+
+      classrelation 128383 // <association>
+	relation_ref 128255 // <association>
+      end
+
+      classrelation 128511 // <association>
+	relation 128383 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128511 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128639 // <association>
+      end
+
+      classrelation 128895 // <association>
+	relation_ref 128511 // <association>
       end
     end
 
@@ -283,6 +334,9 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 128639 // <association>
+	relation_ref 128383 // <association>
+      end
     end
   end
 end
