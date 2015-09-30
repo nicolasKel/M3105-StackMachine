@@ -27,9 +27,16 @@ public class CPU
 	public final static int JZ		= 0x13;
 	public final static int DUP		= 0x14;
 	public final static int POP		= 0x15;
-	private IO ioSystem;
+	private ConsoleIO ioSystem;
 	
 	// TODO something is missing here...
+	
+	private Stack stack;
+	
+	public CPU()
+	{
+		this.stack = new Stack(); //TODO what size?
+	}
 
 	public void run()
 	{
@@ -50,7 +57,7 @@ public class CPU
 					}
 					case PUSH:
 					{
-						// TODO something is missing here...
+						stack.push();
 						break;
 					}
 					case ADD:
@@ -150,7 +157,7 @@ public class CPU
 					}
 					case POP:
 					{
-						// TODO something is missing here...
+						stack.pop();
 						break;
 					}
 					default:
@@ -198,7 +205,7 @@ public class CPU
 		
 	}
 
-	public void wireToIoSubsystem(IO ioSystem) {
+	public void wireToIoSubsystem(ConsoleIO ioSystem) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -9,7 +9,8 @@ public class Instruction {
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getOpCode() {
+	public int getOpCode() 
+	{
 		return this.opCode;
 	}
 
