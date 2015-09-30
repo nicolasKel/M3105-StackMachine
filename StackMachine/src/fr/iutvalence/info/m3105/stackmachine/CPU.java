@@ -27,6 +27,7 @@ public class CPU
 	public final static int JZ		= 0x13;
 	public final static int DUP		= 0x14;
 	public final static int POP		= 0x15;
+	private IO ioSystem;
 	
 	// TODO something is missing here...
 
@@ -36,7 +37,7 @@ public class CPU
 		{
 			while (true)
 			{
-				// TODO something is missing here...
+				int opCode = 0;
 
 				// System.err.print("@" + this.programCounter + ": ");
 				switch (opCode)

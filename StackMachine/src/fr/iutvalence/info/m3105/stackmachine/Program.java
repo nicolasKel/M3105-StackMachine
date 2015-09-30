@@ -3,18 +3,19 @@ package fr.iutvalence.info.m3105.stackmachine;
 public class Program 
 {
 
+	private Instruction[] instructions;
+	private int instructionCount;
+
 	public Program(Instruction[] instructions) {
-		// TODO Auto-generated constructor stub
+		this.instructions = instructions;
 	}
 
 	public int getInstructionCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return instructionCount;
 	}
 
 	public Instruction getInstructionAt(int instructionNumber) {
-		// TODO Auto-generated method stub
-		return null;
+		return instructions[instructionNumber];
 	}
 
 }

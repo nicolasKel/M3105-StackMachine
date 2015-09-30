@@ -3,13 +3,16 @@ package fr.iutvalence.info.m3105.stackmachine;
 public class Memory 
 {
 
-	public Memory(int i, int j) {
-		// TODO Auto-generated constructor stub
+	private int startAddress;
+	private int endAddress;
+
+	public Memory(int startAddress, int endAddress) {
+		this.startAddress = startAddress;
+		this.endAddress = endAddress;
 	}
 
 	public int getStartAddress() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.startAddress;
 	}
 
 	public void write(int currentAddress, Object opCode) {
