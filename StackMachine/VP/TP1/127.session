@@ -1,0 +1,16 @@
+window_sizes 1280 962 213 443 682 82
+diagrams
+  active  classdiagram_ref 128127 // TP1
+    775 643 100 4 0 85
+end
+show_stereotypes
+open
+  class_ref 128127 // IO
+  class_ref 128255 // CPU
+  class_ref 128383 // Machine
+  class_ref 128511 // MachineLauncher
+  class_ref 128639 // Program
+  class_ref 128767 // Instruction
+  class_ref 128895 // Memory
+end
+end
